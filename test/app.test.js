@@ -61,3 +61,6 @@ test("POST /tasks returns 400 when title is missing or empty", async () => {
     server.close();
   }
 });
+test("multiplies price by quantity for a single item", () => {
+  assert.equal(calculateTotal([{ price: 7, quantity: 3 }]), 21);
+});
