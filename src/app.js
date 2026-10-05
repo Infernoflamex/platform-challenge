@@ -30,6 +30,11 @@ app.get("/total", (_req, res) => {
 
   res.json({ total: calculateTotal(items) });
 });
+app.get("/tasks", (_req, res) => {
+  res.json(tasks);
+});
+
+
 app.patch("/tasks/:id", (req, res) => {
   const id = Number(req.params.id);
   const task = tasks.find((t) => t.id === id);
